@@ -26,7 +26,7 @@ def PrintList(list, rank):
         else:
             print("\033[1;31;40m" + cm.champion.name, cm.points)
     remainingMasteryWithout = ((len(list) - 9) * rank) - sumPointsWithout
-    print("\033[1;37;40mThis means that you still need a total of ", str(remainingMasteryWithout), "mastery points.")
+    print("\033[1;37;40mThis means that you still need a total of", str(remainingMasteryWithout), "mastery points over", str(len(list) - 9), "champions.")
 
 def main():
     print("\nWelcome to Catch 'em LoL.")
