@@ -30,7 +30,7 @@ def PrintList(list, rank):
 
 def main():
     print("\nWelcome to Catch 'em LoL.")
-    SetAPIKey("RGAPI-417dfde6-b188-4d82-8020-0d13e6801181")
+    SetAPIKey("RGAPI-0b774355-4ebc-478a-9407-c87664ea85cb")
 
     regionInput = (str)(input('Type in your region: '))
     nameInput = (str)(input('Type in your summoner name: '))
