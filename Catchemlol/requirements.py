@@ -1,6 +1,6 @@
 from enum import IntEnum
 
-class Rank(IntEnum):
+class CatchEmAll(IntEnum):
     IRON = 100
     BRONZE = 500
     SILVER = 1000

@@ -1,5 +1,5 @@
 import cassiopeia as cass
-from rank import Rank
+from requirements import CatchEmAll
 from constants import apiKey, championsChallenge
 
 def PrintList(list, rank, region):
@@ -29,7 +29,7 @@ def main():
     print("\nWelcome to Catch 'em LoL.")
     regionInput = (str)(input('Type in your region: '))
     nameInput = (str)(input('Type in your summoner name: '))
-    rankInput = Rank[(input('Type in what rank of Catch em all you want to see: ').upper())].value
+    rankInput = CatchEmAll[(input('Type in what rank of Catch em all you want to see: ').upper())].value
 
     masteries = cass.get_champion_masteries(nameInput, regionInput).filter(lambda cm: cm.points < rankInput)
     PrintList(masteries, rankInput, regionInput)
