@@ -2,9 +2,6 @@ from doctest import master
 import cassiopeia as cass
 from rank import Rank
 
-def SetAPIKey(APIKey):
-    cass.set_riot_api_key(APIKey)
-
 def PrintList(list, rank, region):
     sumPointsWithout = 0
     championsChallenge = 150
@@ -22,7 +19,7 @@ def PrintList(list, rank, region):
 
 def main():
     print("\nWelcome to Catch 'em LoL.")
-    SetAPIKey("RGAPI-7169d8fa-e692-4fb2-9f4e-c51dc2b610fe")
+    cass.set_riot_api_key("RGAPI-7169d8fa-e692-4fb2-9f4e-c51dc2b610fe")
 
     regionInput = (str)(input('Type in your region: '))
     nameInput = (str)(input('Type in your summoner name: '))
