@@ -9,9 +9,9 @@ def CatchEmAll(name, region):
     from constants import catchEmAllChallenge
     sumPointsWithout = 0
 
-    rankInput = CatchEmAllRequirement[(input('Type in what rank of Catch em all you want to see: ').upper())].value    # Ask for user input for rank
-    masteries = cass.get_champion_masteries(name, region).filter(lambda cm: cm.points < rankInput)          # List with correct filter depending on input                                                                                   
-    championsThreshold = len(cass.get_champions(region)) - catchEmAllChallenge                              # See threshold for challenge
+    rankInput = CatchEmAllRequirement[(input('Type in what rank of Catch em all you want to see: ').upper())].value     # Ask for user input for rank
+    masteries = cass.get_champion_masteries(name, region).filter(lambda cm: cm.points < rankInput)                      # List with correct filter depending on input                                                                                   
+    championsThreshold = len(cass.get_champions(region)) - catchEmAllChallenge                                          # See threshold for challenge
      
     if(len(masteries) == 0):
         print("You have every single champion on " + str(rankInput) + " mastery points. Amazing!")
