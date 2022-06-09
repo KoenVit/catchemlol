@@ -1,4 +1,3 @@
-from doctest import master
 import cassiopeia as cass
 from rank import Rank
 
@@ -18,9 +17,10 @@ def PrintList(list, rank, region):
     print("\033[1;37;40mThis means that you still need a total of", str(remainingMasteryWithout), "mastery points over", str(len(list) - championsThreshold), "champions.")
 
 def main():
-    print("\nWelcome to Catch 'em LoL.")
-    cass.set_riot_api_key("RGAPI-7169d8fa-e692-4fb2-9f4e-c51dc2b610fe")
+    from apikey import apiKey
+    cass.set_riot_api_key(apiKey)
 
+    print("\nWelcome to Catch 'em LoL.")
     regionInput = (str)(input('Type in your region: '))
     nameInput = (str)(input('Type in your summoner name: '))
     rankInput = Rank[(input('Type in what rank of Catch em all you want to see: ').upper())].value
