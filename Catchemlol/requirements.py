@@ -1,6 +1,6 @@
 from enum import IntEnum
 
-class CatchEmAll(IntEnum):
+class CatchEmAllRequirement(IntEnum):
     IRON = 100
     BRONZE = 500
     SILVER = 1000
