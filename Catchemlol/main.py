@@ -8,7 +8,7 @@ def main():
     regionInput = (str)(input('Type in your region: '))
     nameInput = (str)(input('Type in your summoner name: '))
     
-    challenge.PrintCatchEmAll(nameInput, regionInput)
+    challenge.CatchEmAll(nameInput, regionInput)
     input("Press enter to quit")
 
 if __name__ == "__main__":

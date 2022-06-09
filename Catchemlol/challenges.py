@@ -4,7 +4,7 @@ from constants import apiKey
 def SetAPI():
     cass.set_riot_api_key(apiKey)
 
-def PrintCatchEmAll(name, region):
+def CatchEmAll(name, region):
     from requirements import CatchEmAllRequirement
     from constants import catchEmAllChallenge
     sumPointsWithout = 0
