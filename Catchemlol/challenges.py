@@ -35,7 +35,11 @@ def CatchEmAll(name, region, rank):
             " champions on " + str(rank) + " mastery points.")
 
 def OneTrick(name, region, rank):
-    masteries = max(cass.get_champion_masteries(name, region))                               # List with correct filter depending on input
-    print("Your current highest mastery champion is " + masteries.champion.name + " with " + masteries.champion.points + " mastery points.")
-    masteryNeeded = rank - masteries.champion.name
-    print("You need " + masteryNeeded + " more mastery points to get to " + rank + " mastery points!")
+    masteries = cass.get_champion_masteries(name, region).filter(lambda cm: cm.points >= 0)
+    highestChamp = masteries[0]
+    print("Your current highest mastery champion is " + highestChamp.champion.name + " with " + str(highestChamp.points) + " mastery points.")
+    masteryNeeded = rank - highestChamp.points
+    if(masteryNeeded <= 0):
+        print("You already have this medal, congratulations!")
+    else:
+        print("You need " + str(masteryNeeded) + " more mastery points to get to " + str(rank) + " mastery points!")
