@@ -1,11 +1,10 @@
 import cassiopeia as cass
-from constants import apiKey
+from apikey import apiKey
 
 def SetAPI():
     cass.set_riot_api_key(apiKey)
 
 def CatchEmAll(name, region, rank):
-    from requirements import CatchEmAllRequirement
     from requirements import catchEmAllChallenge
     sumPointsWithout = 0
 
