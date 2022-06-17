@@ -6,7 +6,7 @@ def SetAPI():
 
 def CatchEmAll(name, region, rank):
     from requirements import catchEmAllChallenge
-    sumPointsWithout = 0                #ohja
+    sumPointsWithout = 0
 
     masteries = cass.get_champion_masteries(name, region).filter(lambda cm: cm.points < rank)                           # List with correct filter depending on input                                                                                   
     championsThreshold = len(cass.get_champions(region)) - catchEmAllChallenge                                          # See threshold for challenge.
